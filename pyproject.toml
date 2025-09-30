@@ -1,0 +1,45 @@
+[project]
+name = "query-example"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard-no-fastapi-cloud-cli]>=0.118.0",
+    "psycopg[binary]>=3.2.10",
+    "pydantic>=2.11.9",
+    "pydantic-settings>=2.11.0",
+    "sqlmodel>=0.0.25",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.13.2",
+]
+
+[tool.ruff]
+line-length = 128
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+    "A", # prevent using keywords that clobber python builtins
+    "B", # bugbear: security warnings
+    "E", # pycodestyle
+    "F", # pyflakes
+    "I", # import sorting
+    "ISC", # implicit string concatenation
+    "UP", # alert you when better syntax is available in your python version
+    "RUF", # the ruff developer's own rules
+    "Q",
+]
+ignore = [
+    "B008"  # Do not call Depends in function arguments
+]
+fixable = [
+    "ALL"
+]
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.per-file-ignores]
+"src/types/__init__.py" = ["A005"]  # don't complain about types name we import via src.types anyway

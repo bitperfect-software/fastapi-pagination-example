@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.env
+.env.docker
+venv
+.venv
+__pycache__/
+.coverage
+coverage
+*.pem
+
+dumps/*
+
+# Python-generated files
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
