@@ -1,6 +1,6 @@
 # bitperfect FastAPI - Pagination Example
 
-This Repository includes an example how to use our lightweight pagination example we've written in detail [here](https://bitperfect.at/en/blog/pagination-mit-fastapi).
+This Repository includes an example how to use our lightweight pagination example we've written about in detail [here](https://bitperfect.at/en/blog/pagination-mit-fastapi).
 
 The relevant files can be found here:
 - [pagination classes](src/types/pagination.py)
